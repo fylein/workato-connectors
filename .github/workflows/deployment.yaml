@@ -4,7 +4,6 @@ on: push
 
 jobs:
   release:
-
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -19,7 +18,7 @@ jobs:
         WORKATO_API_TOKEN: ${{ secrets.WORKATO_TOKEN}}
       run: |
       gem install workato-connector-sdk
-      workato push --connector=travelperk-connector/connector.rb --logo=travelperk/travelperk.png
+      workato push --connector=travelperk-connector/connector.rb --logo=travelperk-connector/travelperk.png
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
       env:
