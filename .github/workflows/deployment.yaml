@@ -5,6 +5,7 @@ on: push
 jobs:
   release:
     runs-on: ubuntu-latest
+    environment: workato
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
