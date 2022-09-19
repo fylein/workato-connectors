@@ -1,8 +1,8 @@
 name: Connector Deployment
 
-on: 
-  push:
-    branches: [ master, init ]
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
 
 jobs:
   release:
