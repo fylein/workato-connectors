@@ -17,7 +17,7 @@ jobs:
       env:
         WORKATO_EMAIL: ${{ secrets.WORKATO_EMAIL }}
         WORKATO_TOKEN: ${{ secrets.WORKATO_TOKEN }}
-      run: workato push --connector=travelperk-connector/connector.rb --logo=travelperk-connector/travelperk.png --notes='release'
+      run: workato push --api-token=$WORKATO_TOKEN --api-email=$WORKATO_EMAIL --connector=travelperk-connector/connector.rb --logo=travelperk-connector/travelperk.png --notes='release'
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
       env:
