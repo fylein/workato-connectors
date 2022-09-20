@@ -1,6 +1,8 @@
 name: Connector Deployment
 
-on: push
+on: 
+  push:
+    branches: [ master ]
 
 jobs:
   release:
