@@ -8,17 +8,12 @@ jobs:
     environment: workato
     steps:
     - uses: actions/checkout@v2
-    - uses: jitterbit/get-changed-files@v1
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7
         bundler-cache: true 
     - run: gem install workato-connector-sdk
-    - run:
-      for changed_file in ${{ steps.files.outputs.all }}; do
-      echo "List of changed files ${changed_file}."
-      done
     - name: Relase changes to workato.
       env:
         WORKATO_API_EMAIL: ${{ secrets.WORKATO_API_EMAIL }}
