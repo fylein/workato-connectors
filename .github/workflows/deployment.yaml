@@ -14,18 +14,18 @@ jobs:
         ruby-version: 2.7
         bundler-cache: true 
     - run: gem install workato-connector-sdk
-    - name: Get changed files travelperk-connector
+    - name: Get changed files travelperk-connector.
       id: changed-files-specific
       uses: tj-actions/changed-files@v29
       with:
         files: |
           travelperk-connector/connector.rb
-    - name: Release changes to workato if anything is changed in travelperk-connector
+    - name: Release changes to workato if anything is changed in travelperk-connector.
       env:
         WORKATO_API_EMAIL: ${{ secrets.WORKATO_API_EMAIL }}
         WORKATO_API_TOKEN: ${{ secrets.WORKATO_API_TOKEN }}
       if: steps.changed-files-specific.outputs.any_changed == 'true'
-      run: |
+      run:
         workato push --connector=travelperk-connector/connector.rb --logo=travelperk-connector/travelperk.png --notes=${{ github.event.head_commit.message }}
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
