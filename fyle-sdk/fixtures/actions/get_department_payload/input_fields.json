@@ -1,0 +1,16 @@
+[
+    {
+        "name": "limeitem_data",
+        "type": "array",
+        "of": "object",
+        "label": "Rows",
+        "properties": [
+            {
+                "control_type": "text",
+                "label": "Department Name",
+                "type": "string",
+                "name": "department_name"
+            }
+        ]
+    }
+]
