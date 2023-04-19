@@ -12,12 +12,33 @@
     ],
     authorization: {
       type: "custom_auth",
+
+      client_id: lambda do |connection|
+        account_property("CLIENT_ID")
+      end,
+
+      client_secret: lambda do |connection|
+        account_property("CLIENT_SECRET")
+      end,
+
+      refresh_token: lambda do |connection|
+        account_property("REFRESH_TOKEN")
+      end,
+
+      token_url: lambda do |connection|
+        account_property("TOKEN_URL")
+      end,
+
+      base_uri: lambda do |connection|
+        accounting_export("BASE_URI")
+      end,
+
       acquire: lambda do |connection|
-        response = post(account_property("FYLE_TOKEN_URI"),
+        response = post(connection["token_url"],
                         grant_type: "refresh_token",
-                        refresh_token: account_property("REFRESH_TOKEN"),
-                        client_id: account_property("FYLE_CLIENT_ID"),
-                        client_secret: account_property("FYLE_CLIENT_SECRET"))
+                        refresh_token: connection["refresh_token"],
+                        client_id: connection["client_id"],
+                        client_secret: connection["client_secret"])
         { token: response.after_response do |code, body, response_headers| body["access_token"] end }
       end,
 
@@ -26,12 +47,12 @@
       },
     },
     base_uri: lambda do |connection|
-      account_property("BASE_URI")
+      connection["base_ur"]
     end,
   },
 
   test: ->(connection) {
-    post("https://accounts.fylehq.com/oauth/cluster")
+    post("https://accounts.fyle.tech/oauth/cluster")
   },
 
   object_definitions: {
@@ -1498,7 +1519,7 @@
     #GET API's
     get_list_of_categories: {
 
-      execute: lambda do |connection, input|
+      execute: lambda do |connection|
         categories = get("#{connection["base_uri"]}/platform/v1beta/admin/categories")
       end,
       output_fields: lambda do |object_definitions|
@@ -1513,6 +1534,7 @@
         ]
       end,
     },
+
     get_list_of_system_categories: {
       execute: lambda do |connection, input|
         categories = get("#{connection["base_uri"]}/platform/v1beta/admin/categories/system_categories")
@@ -1529,6 +1551,7 @@
         ]
       end,
     },
+
     get_list_of_projects: {
       execute: lambda do |connection, input|
         categories = get("#{connection["base_uri"]}/platform/v1beta/admin/projects")
@@ -1545,6 +1568,7 @@
         ]
       end,
     },
+
     get_list_of_expenses: {
       input_fields: lambda do
         [
@@ -1588,6 +1612,7 @@
         ]
       end,
     },
+
     get_list_of_cost_centers: {
       execute: lambda do |connection, input|
         categories = get("#{connection["base_uri"]}/platform/v1beta/admin/cost_centers")
@@ -1604,6 +1629,7 @@
         ]
       end,
     },
+
     get_list_of_expense_report: {
       input_fields: lambda do
         [
@@ -1653,6 +1679,7 @@
         ]
       end,
     },
+
     get_list_of_expense_by_report_id: {
       input_fields: lambda do
         [
@@ -1689,6 +1716,7 @@
         ]
       end,
     },
+
     get_list_of_corporate_cards: {
       execute: lambda do |connection, input|
         categories = get("#{connection["base_uri"]}/platform/v1beta/admin/corporate_cards")
@@ -1705,6 +1733,7 @@
         ]
       end,
     },
+
     get_list_of_expense_fields: {
       execute: lambda do |connection, input|
         query_params = {
@@ -1726,6 +1755,7 @@
         ]
       end,
     },
+
     get_list_of_tax_groups: {
       execute: lambda do |connection, input|
         query_params = {
@@ -1747,6 +1777,7 @@
         ]
       end,
     },
+
     get_list_of_reimbursement: {
       execute: lambda do |connection, input|
         reimbursements = get("#{connection["base_uri"]}/platform/v1beta/admin/reimbursements")
@@ -1763,6 +1794,7 @@
         ]
       end,
     },
+
     get_list_of_employees: {
       execute: lambda do |connection, input|
         query_params = {
@@ -1784,6 +1816,7 @@
         ]
       end,
     },
+
     search_employee: {
       input_fields: lambda do
         [
@@ -1816,6 +1849,7 @@
         ]
       end,
     },
+
     get_departments: {
       execute: lambda do |connection, input|
         categories = get("#{connection["base_uri"]}/platform/v1beta/admin/departments")
@@ -2054,7 +2088,7 @@
         payload = {
           "data": input_fields["data"],
         }
-        categories = post("#{connection["base_uri"]}/platform/v1beta/admin/employees/invite/bulk", payload).
+        employee = post("#{connection["base_uri"]}/platform/v1beta/admin/employees/invite/bulk", payload).
           after_error_response(400) do |code, body, header, message|
           error("#{message}: #{body}")
         end
@@ -2080,7 +2114,6 @@
         departments = post("#{connection["base_uri"]}/platform/v1beta/admin/departments", payload)
       end,
     },
-
     post_expenses: {
       input_fields: lambda do
         [
@@ -2572,6 +2605,7 @@
 
       user_profile
     end,
+
     paginated_get_all: lambda do |input, connection|
       count = 1
       total_count = 0
@@ -2605,6 +2639,5 @@
 
       flattened_expenses
     end,
-
   },
 }

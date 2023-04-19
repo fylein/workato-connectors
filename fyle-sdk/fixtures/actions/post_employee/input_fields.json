@@ -1,0 +1,60 @@
+[
+    {
+        "name": "data",
+        "type": "array",
+        "of": "object",
+        "label": "Rows",
+        "properties": [
+            {
+                "control_type": "text",
+                "label": "Name",
+                "name": "user_full_name",
+                "type": "string",
+                "optional": false
+            },
+            {
+                "control_type": "text",
+                "label": "Email",
+                "name": "user_email",
+                "type": "string",
+                "optional": false
+            },
+            {
+                "name": "title",
+                "type": "string",
+                "optional": false,
+                "control_type": "text"
+            },
+            {
+                "name": "location",
+                "type": "string",
+                "optional": false,
+                "control_type": "text"
+            },
+            {
+                "name": "department_name",
+                "type": "string",
+                "optional": true,
+                "control_type": "text"
+            },
+            {
+                "name": "mobile",
+                "type": "string",
+                "optional": true,
+                "control_type": "text"
+            },
+            {
+                "name": "is_enabled",
+                "type": "boolean",
+                "optional": true,
+                "control_type": "boolean"
+            },
+            {
+                "name": "approver_emails",
+                "type": "array",
+                "of": "string",
+                "label": "Approver emails"
+            }
+        ]
+    }
+]

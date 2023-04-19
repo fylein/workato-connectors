@@ -29,7 +29,6 @@ RSpec.describe "actions/get_departments_payload", :vcr do
 
   describe "input_fields" do
     subject(:input_fields) { action.input_fields(settings) }
-
     let(:expected_input_fields) { JSON.parse(File.read("fixtures/actions/get_department_payload/input_fields.json")) }
 
     context "give valid input" do
@@ -41,7 +40,6 @@ RSpec.describe "actions/get_departments_payload", :vcr do
 
   describe "output_fields" do
     subject(:output_fields) { action.output_fields(settings) }
-
     let(:expected_output_fields) { JSON.parse(File.read("fixtures/actions/get_department_payload/output_fields.json")) }
 
     context "give valid input" do
