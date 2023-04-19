@@ -1,0 +1,416 @@
+{
+    "count": 22,
+    "data": [
+        {
+            "code": null,
+            "created_at": "2022-12-21T08:51:03.290806+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Marketing",
+            "doc_url": null,
+            "id": "dept5ImgRtQg7P",
+            "is_enabled": true,
+            "name": "Marketing",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2022-12-21T08:51:03.290806+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2020-11-11T10:49:31.692459+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Department 3",
+            "doc_url": null,
+            "id": "dept6kta7hdbp0",
+            "is_enabled": true,
+            "name": "Department 3",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2020-11-11T10:49:33.692459+00:00"
+        },
+        {
+            "code": "3JVC819DAN",
+            "created_at": "2020-11-11T10:49:38.084646+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Human Resource / Finance and Accounting",
+            "doc_url": "QUUHEDXHQQ",
+            "id": "deptA8wqSw9JCk",
+            "is_enabled": true,
+            "name": "Human Resource",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Finance and Accounting",
+            "updated_at": "2020-11-11T10:49:40.084646+00:00"
+        },
+        {
+            "code": "8AP70722IL",
+            "created_at": "2020-11-11T10:49:38.325770+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Training / Sales",
+            "doc_url": "OD28JS1O0O",
+            "id": "deptdRD2oWmokK",
+            "is_enabled": true,
+            "name": "Training",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Sales",
+            "updated_at": "2020-11-11T10:49:40.325770+00:00"
+        },
+        {
+            "code": "662W94OANU",
+            "created_at": "2020-11-11T10:49:38.046303+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Marketing / Design",
+            "doc_url": "PCD965FAUL",
+            "id": "depteYOwCG4EEc",
+            "is_enabled": true,
+            "name": "Marketing",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Design",
+            "updated_at": "2020-11-11T10:49:40.046303+00:00"
+        },
+        {
+            "code": "5OY0MPK23D",
+            "created_at": "2020-11-11T10:49:38.219546+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Product / Marketing",
+            "doc_url": "J6Q9KU891E",
+            "id": "deptFj7c4bXZOg",
+            "is_enabled": true,
+            "name": "Product",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Marketing",
+            "updated_at": "2020-11-11T10:49:40.219546+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2022-12-21T08:50:58.648126+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Operations",
+            "doc_url": null,
+            "id": "deptG520gfAhv1",
+            "is_enabled": true,
+            "name": "Operations",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2022-12-21T08:50:58.648126+00:00"
+        },
+        {
+            "code": "TP5RQB6ZQB",
+            "created_at": "2020-11-11T10:49:38.290034+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Purchasing / Customer Success",
+            "doc_url": "9BZNDS94T1",
+            "id": "deptim3Ivf94T2",
+            "is_enabled": true,
+            "name": "Purchasing",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Customer Success",
+            "updated_at": "2020-11-11T10:49:40.290034+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2022-12-21T08:51:00.405998+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "IT",
+            "doc_url": null,
+            "id": "deptIOczEKQ3LL",
+            "is_enabled": true,
+            "name": "IT",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2022-12-21T08:51:00.405998+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2022-12-21T08:50:57.206003+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Human Resources",
+            "doc_url": null,
+            "id": "deptNHT2OHoYFn",
+            "is_enabled": true,
+            "name": "Human Resources",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2022-12-21T08:50:57.206003+00:00"
+        },
+        {
+            "code": "QLMFHHWIY3",
+            "created_at": "2020-11-11T10:49:38.117726+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Finance and Accounting / Design",
+            "doc_url": "4XSK7T6CTW",
+            "id": "deptNHW63iccxw",
+            "is_enabled": true,
+            "name": "Finance and Accounting",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Design",
+            "updated_at": "2020-11-11T10:49:40.117726+00:00"
+        },
+        {
+            "code": "JIJAMNN25D",
+            "created_at": "2020-11-11T10:49:38.151315+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Design / Corporate Travel",
+            "doc_url": "I7MICY4SB1",
+            "id": "deptoN4qJ0Mw5L",
+            "is_enabled": true,
+            "name": "Design",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Corporate Travel",
+            "updated_at": "2020-11-11T10:49:40.151315+00:00"
+        },
+        {
+            "code": "9K7BDFPDZ0",
+            "created_at": "2020-11-11T10:49:38.256293+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Engineering / Marketing",
+            "doc_url": "BEH8WWRLQO",
+            "id": "deptQrk57KClZR",
+            "is_enabled": true,
+            "name": "Engineering",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Marketing",
+            "updated_at": "2020-11-11T10:49:40.256293+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2020-11-11T10:49:31.692459+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Department 4",
+            "doc_url": null,
+            "id": "deptR5tiaXGPcV",
+            "is_enabled": true,
+            "name": "Department 4",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2020-11-11T10:49:33.692459+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2022-12-21T08:50:59.487780+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Sales",
+            "doc_url": null,
+            "id": "deptRqt2cP1nw3",
+            "is_enabled": true,
+            "name": "Sales",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2022-12-21T08:50:59.487780+00:00"
+        },
+        {
+            "code": "MO5TZLUI57",
+            "created_at": "2020-11-11T10:49:38.005369+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Customer Success / Sales",
+            "doc_url": "ACRX4P3HB3",
+            "id": "deptTsBTOXU8TJ",
+            "is_enabled": true,
+            "name": "Customer Success",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Sales",
+            "updated_at": "2020-11-11T10:49:40.005369+00:00"
+        },
+        {
+            "code": "YL01X4P0PW",
+            "created_at": "2020-11-11T10:49:38.183639+00:00",
+            "department_head_user_ids": [
+                "usG6YgUWBHIG"
+            ],
+            "department_head_users": [
+                {
+                    "email": "owner@fyleforintegrations.com",
+                    "full_name": "Fyle For Integrations Staging",
+                    "id": "usG6YgUWBHIG"
+                }
+            ],
+            "description": "",
+            "display_name": "Quality Assurance / Product",
+            "doc_url": "7Q7I7TKHVP",
+            "id": "deptvouxPhImtA",
+            "is_enabled": true,
+            "name": "Quality Assurance",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": "Product",
+            "updated_at": "2020-11-11T10:49:40.183639+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2022-12-21T08:51:05.030562+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Custom Nilesh",
+            "doc_url": null,
+            "id": "deptXGeDKlBU0x",
+            "is_enabled": true,
+            "name": "Custom Nilesh",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2022-12-21T08:51:05.030562+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2022-12-21T08:51:01.274603+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Customer Success",
+            "doc_url": null,
+            "id": "deptxhKDnJ4Q75",
+            "is_enabled": true,
+            "name": "Customer Success",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2022-12-21T08:51:01.274603+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2020-11-11T10:49:31.692459+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Department 2",
+            "doc_url": null,
+            "id": "deptxWO1OrX9mS",
+            "is_enabled": true,
+            "name": "Department 2",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2020-11-11T10:49:33.692459+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2022-12-21T08:51:02.138209+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Product",
+            "doc_url": null,
+            "id": "deptY8R8pEQGyx",
+            "is_enabled": true,
+            "name": "Product",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2022-12-21T08:51:02.138209+00:00"
+        },
+        {
+            "code": null,
+            "created_at": "2022-12-21T08:51:04.137185+00:00",
+            "department_head_user_ids": [],
+            "department_head_users": [],
+            "description": null,
+            "display_name": "Finance",
+            "doc_url": null,
+            "id": "deptziw4PVPkya",
+            "is_enabled": true,
+            "name": "Finance",
+            "org_id": "or7m5SVD9Rv1",
+            "sub_department": null,
+            "updated_at": "2022-12-21T08:51:04.137185+00:00"
+        }
+    ],
+    "offset": 0
+}

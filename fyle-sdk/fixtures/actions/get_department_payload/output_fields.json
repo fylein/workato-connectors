@@ -1,0 +1,9 @@
+[
+    {
+      "name": "data",
+      "type": "array",
+      "of": "string",
+      "control_type": "text",
+      "label": "Data"
+    }
+  ]
