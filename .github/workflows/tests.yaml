@@ -24,6 +24,10 @@ jobs:
  
     - run: gem install workato-connector-sdk
     
+    - name: Change Directory
+      run: |
+        cd fyle-sdk
+
     - name: Run tests
       run: |
         cd fyle-sdk
