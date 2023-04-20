@@ -1,0 +1,6 @@
+
+client_id: ${{ secrets.CLIENT_ID }}
+client_secret: ${{ secrets.CLIENT_SECRET }}
+refresh_token: ${{ secrets.REFRESH_TOKEN }}
+token_url: ${{ secrets.TOKEN_URL }}
+base_uri: ${{ secrets.BASE_URI }}
