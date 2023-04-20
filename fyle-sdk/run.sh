@@ -1,8 +1,7 @@
-source ../setup.sh
-
-
-SED_EXTRA_ARGS='""';
-
+if [[ $OSTYPE == darwin* ]]
+then
+  SED_EXTRA_ARGS='""';
+fi
 
 sed -i $SED_EXTRA_ARGS "s?{{CLIENT_ID}}?${CLIENT_ID}?g" $KUBERNETES_MANIFEST_FILE_PATH;
 sed -i $SED_EXTRA_ARGS "s?{{CLIENT_SECRET}}?${CLIENT_SECRET}?g" $KUBERNETES_MANIFEST_FILE_PATH;
