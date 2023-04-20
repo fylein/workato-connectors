@@ -23,14 +23,11 @@ jobs:
         bundler-cache: true 
  
     - run: gem install workato-connector-sdk
-    
-    - name: Change Directory
-      run: |
-        cd fyle-sdk
 
     - name: Run tests
       env: # Only needed if using encrypted files.
         WORKATO_API_EMAIL: ${{ secrets.WORKATO_API_EMAIL }}
         WORKATO_API_TOKEN: ${{ secrets.WORKATO_API_TOKEN }}      
-      
-      run: bundle exec rspec
+      run: |
+        cd fyle-sdk
+        bundle exec rspec
