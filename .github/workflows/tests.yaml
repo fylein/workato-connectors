@@ -21,8 +21,8 @@ jobs:
       with:
         ruby-version: 2.7
         bundler-cache: true 
-      script:
-        - sh 'cd fyle-sdk'   
+      run:
+        cd fyle-sdk   
     - run: gem install workato-connector-sdk
     
     - name: Run tests
