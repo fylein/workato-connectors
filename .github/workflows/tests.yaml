@@ -2,8 +2,7 @@ name: Connector Unit Test & Deployment
 
 on:
   pull_request:
-    types: [assigned, opened, synchronize, reopened]
-    
+    types: [assigned, opened, synchronize, reopened, labeled]
 
 jobs:
   test:
@@ -33,8 +32,17 @@ jobs:
         TOKEN_URL: ${{ secrets.TOKEN_URL }}
         BASE_URI: ${{ secrets.BASE_URI }}
         REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+
+      if: (github.event.action == 'labeled' && github.event.label.name == 'fyle')
       run: |
         cd fyle-sdk
+        bash run.sh
+        bundle install
+        bundle exec rspec
+
+      if: (github.event.action == 'labeled' && github.event.label.name == 'travelperk')
+      run: |
+        cd travelperk-connector
         bash run.sh
         bundle install
         bundle exec rspec

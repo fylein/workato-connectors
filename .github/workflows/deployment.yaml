@@ -3,6 +3,8 @@ name: Connector Deployment
 on: 
   push:
     branches: [ master ]
+  pull_request:
+    types: [labeled]
 
 jobs:
   release:
@@ -20,15 +22,24 @@ jobs:
       id: changed-files-specific
       uses: tj-actions/changed-files@v29
       with:
+        if: (github.event.action == 'labeled' && github.event.label.name == 'travelperk')
         files: |
           travelperk-connector/connector.rb
+
+        if: (github.event.action == 'labeled' && github.event.label.name == 'fyle')
+        files: |
+          fyle-sdk/connector.rb
     - name: Release changes to workato if anything is changed in travelperk-connector.
       env:
         WORKATO_API_EMAIL: ${{ secrets.WORKATO_API_EMAIL }}
         WORKATO_API_TOKEN: ${{ secrets.WORKATO_API_TOKEN }}
       if: steps.changed-files-specific.outputs.any_changed == 'true'
+      if: (github.event.action == 'labeled' && github.event.label.name == 'travelperk')
       run:
         workato push --connector=travelperk-connector/connector.rb --logo=travelperk-connector/travelperk.png --notes='${{ github.event.head_commit.message }}'
+      if: (github.event.action == 'labeled' && github.event.label.name == 'fyle')
+      run:
+        workato push --connector=fyle-sdk/connector.rb --logo=travelperk-connector/travelperk.png --notes='${{ github.event.head_commit.message }}'
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
       env:
