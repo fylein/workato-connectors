@@ -36,13 +36,13 @@ jobs:
       if: (github.event.action == 'labeled' && github.event.label.name == 'fyle')
       run: |
         cd fyle-sdk
-        bash run.sh
+        bash setup_test_environment.sh
         bundle install
         bundle exec rspec
 
       if: (github.event.action == 'labeled' && github.event.label.name == 'travelperk')
       run: |
         cd travelperk-connector
-        bash run.sh
+        bash setup_test_environment.sh
         bundle install
         bundle exec rspec
