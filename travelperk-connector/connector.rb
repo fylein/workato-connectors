@@ -10,13 +10,13 @@
 
     authorization: {
 
-      type: "oauth2",
+      type: "custom_auth",
 
-      client_id: lambda do
+      client_id: lambda do |connection|
         account_property("TRAVELPERK_CLIENT_ID")
       end,
 
-      client_secret: lambda do
+      client_secret: lambda do |connection|
         account_property("TRAVELPERK_CLIENT_SECRET")
       end,
 
@@ -28,43 +28,28 @@
         account_property("TRAVELPERK_TOKEN_URL")
       end,
 
-      apply: lambda do |connection, access_token|
-        headers("Authorization": "Bearer #{access_token}", "Api-Version": "1")
+      refresh_token: lambda do |connection|
+        account_property("refresh_token")
       end,
 
-      acquire: lambda do |connection, code|
-        response = post(account_property("TRAVELPERK_TOKEN_URL")).payload(
-          grant_type: "authorization_code",
-          client_id: account_property("TRAVELPERK_CLIENT_ID"),
-          client_secret: account_property("TRAVELPERK_CLIENT_SECRET"),
-          code: code,
-        ).request_format_www_form_urlencoded
-
-        [
-          { # This hash is for your tokens
-            access_token: response["access_token"],
-            refresh_token: response["refresh_token"],
-          },
-        ]
-      end,
-
-      refresh_on: [401, 403, "Authentication credentials were not provided."],
-
-      refresh: lambda do |connection, refresh_token|
-        response = post(account_property("TRAVELPERK_TOKEN_URL")).
+      acquire: lambda do |connection, refresh_token|
+        response = post(connection["token_url"]).
           payload(
           grant_type: "refresh_token",
-          client_id: account_property("TRAVELPERK_CLIENT_ID"),
-          client_secret: account_property("TRAVELPERK_CLIENT_SECRET"),
-          refresh_token: refresh_token,
+          client_id: connection["client_id"],
+          client_secret: connection["client_secret"],
+          refresh_token: connection["refresh_token"],
         ).request_format_www_form_urlencoded
-        [
-          {
-            access_token: response["access_token"],
-            refresh_token: response["refresh_token"],
-          },
-        ]
+
+        {
+          access_token: response["access_token"],
+          refresh_token: response["refresh_token"],
+        }
       end,
+
+      credentials: ->(connection) {
+        headers("Authorization": "Bearer #{connection["access_token"]}", "Api-Version": "1")
+      },
     },
   },
   object_definitions: {
