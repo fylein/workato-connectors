@@ -21,7 +21,7 @@
       end,
 
       authorization_url: lambda do |connection|
-        account_property("TRAVELPERK_AUTHORIZATION_URL")
+        account_property("TRAVELPERK_AUTH_URL")
       end,
 
       token_url: lambda do |connection|
