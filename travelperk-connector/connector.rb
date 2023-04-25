@@ -29,16 +29,16 @@
       end,
 
       refresh_token: lambda do |connection|
-        account_property("refresh_token")
+        account_property("TRAVELPERK_REFRESH_TOKEN")
       end,
 
-      acquire: lambda do |connection, refresh_token|
-        response = post(connection["token_url"]).
+      acquire: lambda do |connection|
+        response = post(account_property("TRAVELPERK_TOKEN_URL")).
           payload(
           grant_type: "refresh_token",
-          client_id: connection["client_id"],
-          client_secret: connection["client_secret"],
-          refresh_token: connection["refresh_token"],
+          client_id: account_property("TRAVELPERK_CLIENT_ID"),
+          client_secret: account_property("TRAVELPERK_CLIENT_SECRET"),
+          refresh_token: connection["refresh_token"] ? connection["refresh_token"] : account_property("TRAVELPERK_REFRESH_TOKEN"),
         ).request_format_www_form_urlencoded
 
         {
