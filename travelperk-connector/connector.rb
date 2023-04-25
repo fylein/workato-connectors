@@ -52,6 +52,7 @@
       },
     },
   },
+  test: ->(connection) { },
   object_definitions: {
     invoice_lines: {
       fields: lambda do |connection, config_fields|
