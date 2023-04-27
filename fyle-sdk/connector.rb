@@ -38,7 +38,7 @@
                         grant_type: "refresh_token",
                         refresh_token: account_property("REFRESH_TOKEN"),
                         client_id: account_property("CLIENT_ID"),
-                        client_secret: account_property("CLIENT_SECRET")
+                        client_secret: account_property("CLIENT_SECRET"))
         { token: response.after_response do |code, body, response_headers| body["access_token"] end }
       end,
 
@@ -51,7 +51,7 @@
     end,
   },
 
-  test: ->(connection) {},
+  test: ->(connection) { },
 
   object_definitions: {
     files: {
