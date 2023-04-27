@@ -18,28 +18,35 @@ jobs:
         ruby-version: 2.7
         bundler-cache: true 
     - run: gem install workato-connector-sdk
-    - name: Get changed files travelperk-connector.
-      id: changed-files-specific
+    - name: Get changed files Fyle Connector.
+      id: changed-files-specific-fyle
       uses: tj-actions/changed-files@v29
       with:
-        if: (github.event.action == 'labeled' && github.event.label.name == 'travelperk')
+        files: |
+          fyle-sdk/connector.rb
+    - name: Get changed files travelperk-connector.
+      id: changed-files-specific-travelperk
+      uses: tj-actions/changed-files@v29
+      with:
         files: |
           travelperk-connector/connector.rb
 
-        if: (github.event.action == 'labeled' && github.event.label.name == 'fyle')
-        files: |
-          fyle-sdk/connector.rb
     - name: Release changes to workato if anything is changed in travelperk-connector.
       env:
         WORKATO_API_EMAIL: ${{ secrets.WORKATO_API_EMAIL }}
         WORKATO_API_TOKEN: ${{ secrets.WORKATO_API_TOKEN }}
-      if: steps.changed-files-specific.outputs.any_changed == 'true'
-      if: (github.event.action == 'labeled' && github.event.label.name == 'travelperk')
+      if: steps.changed-files-specific-travelperk.outputs.any_changed == 'true'
       run:
         workato push --connector=travelperk-connector/connector.rb --logo=travelperk-connector/travelperk.png --notes='${{ github.event.head_commit.message }}'
-      if: (github.event.action == 'labeled' && github.event.label.name == 'fyle')
+
+    - name: Release changes to workato if anything is changed in fyle-connector.
+      env:
+        WORKATO_API_EMAIL: ${{ secrets.WORKATO_API_EMAIL }}
+        WORKATO_API_TOKEN: ${{ secrets.WORKATO_API_TOKEN }}
+      if: steps.changed-files-specific-fyle.outputs.any_changed == 'true'
       run:
         workato push --connector=fyle-sdk/connector.rb --logo=travelperk-connector/travelperk.png --notes='${{ github.event.head_commit.message }}'
+
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
       env:

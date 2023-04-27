@@ -23,7 +23,7 @@ jobs:
  
     - run: gem install workato-connector-sdk
 
-    - name: Run tests
+    - name: Run tests Fyle SDK
       env: # Only needed if using encrypted files.
         WORKATO_API_EMAIL: ${{ secrets.WORKATO_API_EMAIL }}
         WORKATO_API_TOKEN: ${{ secrets.WORKATO_API_TOKEN }}
@@ -40,9 +40,3 @@ jobs:
         bundle install
         bundle exec rspec
 
-      if: (github.event.action == 'labeled' && github.event.label.name == 'travelperk')
-      run: |
-        cd travelperk-connector
-        bash setup_test_environment.sh
-        bundle install
-        bundle exec rspec
