@@ -34,11 +34,11 @@
       end,
 
       acquire: lambda do |connection|
-        response = post(account_property("FYLE_TOKEN_URI"),
+        response = post(connection.member?("token_url") ? connection["token_url"] : account_property("FYLE_TOKEN_URI"),
                         grant_type: "refresh_token",
-                        refresh_token: account_property("REFRESH_TOKEN"),
-                        client_id: account_property("FYLE_CLIENT_ID"),
-                        client_secret: account_property("FYLE_CLIENT_SECRET"))
+                        refresh_token: connection.member?(:refresh_token) ? connection["refresh_token"] : account_property("REFRESH_TOKEN"),
+                        client_id: connection.member?(:client_id) ? connection["client_id"] : account_property("FYLE_CLIENT_ID"),
+                        client_secret: connection.member?(:client_secret) ? connection["client_secret"] : account_property("FYLE_CLIENT_SECRET"))
         { token: response.after_response do |code, body, response_headers| body["access_token"] end }
       end,
 
