@@ -14,11 +14,11 @@
       type: "custom_auth",
 
       client_id: lambda do |connection|
-        account_property("CLIENT_ID")
+        account_property("FYLE_CLIENT_ID")
       end,
 
       client_secret: lambda do |connection|
-        account_property("CLIENT_SECRET")
+        account_property("FYLE_CLIENT_SECRET")
       end,
 
       refresh_token: lambda do |connection|
@@ -26,7 +26,7 @@
       end,
 
       token_url: lambda do |connection|
-        account_property("TOKEN_URL")
+        account_property("FYLE_TOKEN_URI")
       end,
 
       base_uri: lambda do |connection|
@@ -34,7 +34,7 @@
       end,
 
       acquire: lambda do |connection|
-        response = post(account_property("TOKEN_URL"),
+        response = post(account_property("FYLE_TOKEN_URI"),
                         grant_type: "refresh_token",
                         refresh_token: account_property("REFRESH_TOKEN"),
                         client_id: account_property("CLIENT_ID"),
