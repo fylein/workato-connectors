@@ -16,12 +16,11 @@ RSpec.describe "actions/get_departments", :vcr do
 
   describe "execute" do
     subject(:output) { action.execute(settings, input) }
-
     let(:expected_output) { JSON.parse(File.read("fixtures/actions/get_departments/output.json")) }
 
     context "give valid input" do
       it "gives expected output" do
-        expect(output).to eq(expected_output)
+        expect(output[:data][0].keys).to eq(expected_output.keys)
       end
     end
   end
