@@ -30,15 +30,15 @@
       end,
 
       base_uri: lambda do |connection|
-        accounting_export("BASE_URI")
+        account_property("BASE_URI")
       end,
 
       acquire: lambda do |connection|
-        response = post(connection["token_url"],
+        response = post(account_property("TOKEN_URL"),
                         grant_type: "refresh_token",
-                        refresh_token: connection["refresh_token"],
-                        client_id: connection["client_id"],
-                        client_secret: connection["client_secret"])
+                        refresh_token: account_property("REFRESH_TOKEN"),
+                        client_id: account_property("CLIENT_ID"),
+                        client_secret: account_property("CLIENT_SECRET")
         { token: response.after_response do |code, body, response_headers| body["access_token"] end }
       end,
 
@@ -47,13 +47,11 @@
       },
     },
     base_uri: lambda do |connection|
-      connection["base_ur"]
+      account_property("BASE_URI")
     end,
   },
 
-  test: ->(connection) {
-    post("https://accounts.fyle.tech/oauth/cluster")
-  },
+  test: ->(connection) {},
 
   object_definitions: {
     files: {
