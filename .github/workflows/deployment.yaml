@@ -21,7 +21,7 @@ jobs:
       uses: tj-actions/changed-files@v29
       with:
         files: |
-          fyle-sdk/connector.rb
+          fyle/connector.rb
     - name: Get changed files travelperk-connector.
       id: changed-files-specific-travelperk
       uses: tj-actions/changed-files@v29
@@ -43,7 +43,7 @@ jobs:
         WORKATO_API_TOKEN: ${{ secrets.WORKATO_API_TOKEN }}
       if: steps.changed-files-specific-fyle.outputs.any_changed == 'true'
       run:
-        workato push --connector=fyle-sdk/connector.rb --logo=travelperk-connector/travelperk.png --notes='${{ github.event.head_commit.message }}'
+        workato push --connector=fyle/connector.rb --logo=travelperk-connector/travelperk.png --notes='${{ github.event.head_commit.message }}'
 
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
