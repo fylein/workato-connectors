@@ -1,42 +1,49 @@
 # frozen_string_literal: true
 
-RSpec.describe 'actions/get_list_of_tax_groups', :vcr do
+RSpec.describe "actions/get_list_of_tax_groups", :vcr do
 
   # Spec describes the most commons blocks of an action. Remove describes that you don't need.
   # Learn more: https://docs.workato.com/developing-connectors/sdk/cli/reference/rspec-commands.html
 
   subject(:output) { connector.actions.get_list_of_tax_groups(input) }
 
-  let(:connector) { Workato::Connector::Sdk::Connector.from_file('connector.rb', settings) }
+  let(:connector) { Workato::Connector::Sdk::Connector.from_file("connector.rb", settings) }
   let(:settings) { Workato::Connector::Sdk::Settings.from_default_file }
   let(:input) { {} }
-
-  pending 'add some examples for action output'
 
   # Or add more fine grained tests for each action definition block
   let(:action) { connector.actions.get_list_of_tax_groups }
 
-  describe 'execute' do
-    subject(:output) { action.execute(settings, input, extended_input_schema, extended_output_schema, continue) }
+  describe "execute" do
+    subject(:output) { action.execute(settings) }
+    let(:expected_output) { JSON.parse(File.read("fixtures/actions/get_tax_groups/output.json")) }
 
-    pending 'add some examples'
+    context "give valid input" do
+      it "gives expected output" do
+        expect(output[:data][0].keys).to eq(expected_output.keys)
+      end
+    end
   end
 
-  describe 'sample_output' do
-    subject(:sample_output) { action.sample_output(settings, input) }
+  describe "input_fields" do
+    subject(:input_fields) { action.input_fields(settings) }
+    let(:expected_input_fields) { JSON.parse(File.read("fixtures/actions/get_tax_groups/input_fields.json")) }
 
-    pending 'add some examples'
+    context "give valid input" do
+      it "gives expected output" do
+        expect(input_fields).to eq(expected_input_fields)
+      end
+    end
   end
 
-  describe 'input_fields' do
-    subject(:input_fields) { action.input_fields(settings, config_fields) }
+  describe "output_fields" do
+    subject(:output_fields) { action.output_fields(settings) }
+    let(:expected_output_fields) { JSON.parse(File.read("fixtures/actions/get_tax_groups/output_fields.json")) }
 
-    pending 'add some examples'
-  end
-
-  describe 'output_fields' do
-    subject(:output_fields) { action.output_fields(settings, config_fields) }
-
-    pending 'add some examples'
+    context "give valid input" do
+      it "gives expected output" do
+        expect(output_fields[0]["properties"]).to eq(expected_output_fields[0]["properties"])
+      end
+    end
   end
 end

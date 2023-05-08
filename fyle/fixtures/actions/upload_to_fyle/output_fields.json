@@ -1,7 +1,7 @@
 [
     {
         "name": "data",
-        "label": "Cost Centers",
+        "label": "Expenses",
         "type": "array",
         "of": "object",
         "properties": [
@@ -9,10 +9,10 @@
                 "name": "id"
             },
             {
-                "name": "name"
+                "name": "email"
             },
             {
-                "name": "code"
+                "name": "full_name"
             }
         ]
     }

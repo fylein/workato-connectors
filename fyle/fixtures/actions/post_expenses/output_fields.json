@@ -1,7 +1,7 @@
 [
     {
         "name": "data",
-        "label": "Expenses",
+        "label": "Data",
         "type": "array",
         "of": "object",
         "properties": [

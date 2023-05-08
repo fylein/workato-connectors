@@ -1,0 +1,32 @@
+{
+    "amount": 75,
+    "code": null,
+    "created_at": "2022-07-23T09:34:47.192034",
+    "creator_user_id": "usqywo0f3nBY",
+    "currency": "USD",
+    "employee": {
+        "code": null,
+        "department": null,
+        "department_id": null,
+        "id": "oukHUasWgm8R",
+        "org_id": "or7m5SVD9Rv1",
+        "user": {
+            "email": "ashwin.t@fyle.in",
+            "full_name": "Ashwin T",
+            "id": "usqywo0f3nBY"
+        },
+        "user_id": "usqywo0f3nBY"
+    },
+    "employee_id": "oukHUasWgm8R",
+    "id": "reim0mzO2xdhLG",
+    "is_exported": false,
+    "is_paid": true,
+    "mode": "OFFLINE",
+    "org_id": "or7m5SVD9Rv1",
+    "paid_at": "2022-07-24T11:04:24.265236",
+    "purpose": "C/2022/07/R/16;Joanna",
+    "reimbursement_number": "P/2022/07/R/16",
+    "settlement_id": "setkXg37GQ0ED",
+    "updated_at": "2022-07-24T11:04:24.265236",
+    "user_id": "usqywo0f3nBY"
+}
