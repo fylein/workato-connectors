@@ -1542,8 +1542,8 @@
           {
             name: "data",
             label: "System Categories",
-            type: :array,
-            of: :object,
+            type: "array",
+            of: "object",
             properties: object_definitions["system_category"],
           },
         ]
@@ -1785,8 +1785,8 @@
           {
             name: "data",
             label: "Expense Field",
-            type: :array,
-            of: :object,
+            type: "array",
+            of: "object",
             properties: object_definitions["category"],
           },
         ]
@@ -1947,8 +1947,8 @@
           {
             name: "data",
             label: "Expenses",
-            type: :array,
-            of: :object,
+            type: "array",
+            of: "object",
             properties: object_definitions["user"],
           },
         ]
@@ -2097,7 +2097,7 @@
         [
           {
             name: "name",
-            type: :string,
+            type: "string",
             optional: false,
           },
         ]
@@ -2206,8 +2206,8 @@
           {
             name: "data",
             label: "Data",
-            type: :array,
-            of: :object,
+            type: "array",
+            of: "object",
             properties: object_definitions["expense"],
           },
         ]

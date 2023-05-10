@@ -1,0 +1,22 @@
+{
+    "assignor_user_id": "usG6YgUWBHIG",
+    "bank_name": "American Express",
+    "card_number": "Sample-Bank-xxxxxx-34974",
+    "cardholder_name": "Chandler Muriel Bing's account",
+    "code": null,
+    "created_at": "2020-11-11T11:00:34.064+00:00",
+    "data_feed_source": "STATEMENT_UPLOAD",
+    "id": "bacc1U4Ataa9Sg",
+    "is_dummy": false,
+    "is_mastercard_enrolled": false,
+    "is_visa_enrolled": false,
+    "last_assigned_at": "2020-11-11T11:00:37.294+00:00",
+    "last_ready_for_verification_at": null,
+    "last_synced_at": "2020-11-11T11:00:34.671+00:00",
+    "last_verification_attempt_at": null,
+    "last_verified_at": null,
+    "org_id": "or7m5SVD9Rv1",
+    "updated_at": "2020-11-11T11:00:38.671+00:00",
+    "user_id": "usXwYy7eEykN",
+    "verification_status": "NOT_VERIFIED"
+}

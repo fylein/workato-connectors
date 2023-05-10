@@ -1,0 +1,68 @@
+{
+    "count": 21,
+    "data": [
+        {
+            "name": "Activity"
+        },
+        {
+            "name": "Airlines"
+        },
+        {
+            "name": "Bus"
+        },
+        {
+            "name": "Entertainment"
+        },
+        {
+            "name": "Food"
+        },
+        {
+            "name": "Fuel"
+        },
+        {
+            "name": "Groceries"
+        },
+        {
+            "name": "Lodging"
+        },
+        {
+            "name": "Mail"
+        },
+        {
+            "name": "Mileage"
+        },
+        {
+            "name": "Office Supplies"
+        },
+        {
+            "name": "Others"
+        },
+        {
+            "name": "Parking"
+        },
+        {
+            "name": "Per Diem"
+        },
+        {
+            "name": "Professional Services"
+        },
+        {
+            "name": "Rental"
+        },
+        {
+            "name": "Software"
+        },
+        {
+            "name": "Taxi"
+        },
+        {
+            "name": "Train"
+        },
+        {
+            "name": "Unspecified"
+        },
+        {
+            "name": "Utility"
+        }
+    ]
+}

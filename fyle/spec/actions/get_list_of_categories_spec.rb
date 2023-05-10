@@ -11,8 +11,6 @@ RSpec.describe "actions/get_list_of_categories", :vcr do
   let(:settings) { Workato::Connector::Sdk::Settings.from_default_file }
   let(:input) { {} }
 
-  pending "add some examples for action output"
-
   # Or add more fine grained tests for each action definition block
   let(:action) { connector.actions.get_list_of_categories }
 
