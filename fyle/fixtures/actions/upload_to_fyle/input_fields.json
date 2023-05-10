@@ -1,0 +1,28 @@
+[
+    {
+        "name": "limeitem_data",
+        "type": "array",
+        "of": "object",
+        "label": "Rows",
+        "properties": [
+            {
+                "control_type": "text",
+                "label": "Object ID",
+                "type": "string",
+                "name": "object_id"
+            },
+            {
+                "control_type": "text",
+                "label": "Object type",
+                "type": "string",
+                "name": "object_type"
+            },
+            {
+                "control_type": "text",
+                "label": "Reference",
+                "type": "string",
+                "name": "reference"
+            }
+        ]
+    }
+]
