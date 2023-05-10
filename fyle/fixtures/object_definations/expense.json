@@ -1,0 +1,432 @@
+[
+    {
+        "control_type": "text",
+        "label": "ID",
+        "type": "string",
+        "name": "id"
+    },
+    {
+        "control_type": "text",
+        "label": "User ID",
+        "type": "string",
+        "name": "user_id"
+    },
+    {
+        "control_type": "text",
+        "label": "User email",
+        "type": "string",
+        "name": "user_email"
+    },
+    {
+        "control_type": "text",
+        "label": "User full name",
+        "type": "string",
+        "name": "user_full_name"
+    },
+    {
+        "control_type": "text",
+        "label": "Org ID",
+        "type": "string",
+        "name": "org_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Created at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "created_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Updated at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "updated_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Spent at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "spent_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Source",
+        "type": "string",
+        "name": "source"
+    },
+    {
+        "control_type": "text",
+        "label": "Merchant",
+        "type": "string",
+        "name": "merchant"
+    },
+    {
+        "control_type": "text",
+        "label": "Currency",
+        "type": "string",
+        "name": "currency"
+    },
+    {
+        "control_type": "number",
+        "label": "Amount",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "amount"
+    },
+    {
+        "control_type": "text",
+        "label": "Foreign currency",
+        "type": "string",
+        "name": "foreign_currency"
+    },
+    {
+        "control_type": "number",
+        "label": "Foreign amount",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "foreign_amount"
+    },
+    {
+        "control_type": "text",
+        "label": "Purpose",
+        "type": "string",
+        "name": "purpose"
+    },
+    {
+        "control_type": "number",
+        "label": "Cost center ID",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "cost_center_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Cost center name",
+        "type": "string",
+        "name": "cost_center_name"
+    },
+    {
+        "control_type": "text",
+        "label": "Cost center code",
+        "type": "string",
+        "name": "cost_center_code"
+    },
+    {
+        "control_type": "number",
+        "label": "Category ID",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "category_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Category name",
+        "type": "string",
+        "name": "category_name"
+    },
+    {
+        "control_type": "text",
+        "label": "Sub category",
+        "type": "string",
+        "name": "sub_category"
+    },
+    {
+        "control_type": "text",
+        "label": "Category code",
+        "type": "string",
+        "name": "category_code"
+    },
+    {
+        "control_type": "number",
+        "label": "Project ID",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "project_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Project name",
+        "type": "string",
+        "name": "project_name"
+    },
+    {
+        "control_type": "text",
+        "label": "Sub project",
+        "type": "string",
+        "name": "sub_project"
+    },
+    {
+        "control_type": "text",
+        "label": "Project code",
+        "type": "string",
+        "name": "project_code"
+    },
+    {
+        "control_type": "text",
+        "label": "Source account ID",
+        "type": "string",
+        "name": "source_account_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Source account type",
+        "type": "string",
+        "name": "source_account_type"
+    },
+    {
+        "control_type": "number",
+        "label": "Tax amount",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "tax_amount"
+    },
+    {
+        "control_type": "text",
+        "label": "Tax group ID",
+        "type": "string",
+        "name": "tax_group_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Is billable",
+        "render_input": {},
+        "parse_output": {},
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "label": "Is billable",
+            "control_type": "text",
+            "toggle_hint": "Use custom value",
+            "type": "boolean",
+            "name": "is_billable"
+        },
+        "type": "boolean",
+        "name": "is_billable"
+    },
+    {
+        "control_type": "text",
+        "label": "Is reimbursable",
+        "render_input": {},
+        "parse_output": {},
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "label": "Is reimbursable",
+            "control_type": "text",
+            "toggle_hint": "Use custom value",
+            "type": "boolean",
+            "name": "is_reimbursable"
+        },
+        "type": "boolean",
+        "name": "is_reimbursable"
+    },
+    {
+        "control_type": "text",
+        "label": "Code",
+        "type": "string",
+        "name": "code"
+    },
+    {
+        "control_type": "text",
+        "label": "State",
+        "type": "string",
+        "name": "state"
+    },
+    {
+        "control_type": "text",
+        "label": "Seq num",
+        "type": "string",
+        "name": "seq_num"
+    },
+    {
+        "control_type": "text",
+        "label": "Added to report at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "added_to_report_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Report ID",
+        "type": "string",
+        "name": "report_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Report last approved at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "report_last_approved_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Report last submitted at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "report_last_submitted_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Report seq num",
+        "type": "string",
+        "name": "report_seq_num"
+    },
+    {
+        "control_type": "text",
+        "label": "Report title",
+        "type": "string",
+        "name": "report_title"
+    },
+    {
+        "control_type": "text",
+        "label": "Report state",
+        "type": "string",
+        "name": "report_state"
+    },
+    {
+        "control_type": "text",
+        "label": "Report settlement ID",
+        "type": "string",
+        "name": "report_settlement_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Report last paid at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "report_last_paid_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Is verified",
+        "render_input": {},
+        "parse_output": {},
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "label": "Is verified",
+            "control_type": "text",
+            "toggle_hint": "Use custom value",
+            "type": "boolean",
+            "name": "is_verified"
+        },
+        "type": "boolean",
+        "name": "is_verified"
+    },
+    {
+        "control_type": "text",
+        "label": "Last verified at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "last_verified_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Is exported",
+        "render_input": {},
+        "parse_output": {},
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "label": "Is exported",
+            "control_type": "text",
+            "toggle_hint": "Use custom value",
+            "type": "boolean",
+            "name": "is_exported"
+        },
+        "type": "boolean",
+        "name": "is_exported"
+    },
+    {
+        "control_type": "text",
+        "label": "Last exported at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "last_exported_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Employee ID",
+        "type": "string",
+        "name": "employee_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Employee code",
+        "type": "string",
+        "name": "employee_code"
+    },
+    {
+        "control_type": "text",
+        "label": "Employee department ID",
+        "type": "string",
+        "name": "employee_department_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Employee department code",
+        "type": "string",
+        "name": "employee_department_code"
+    },
+    {
+        "control_type": "text",
+        "label": "Employee department name",
+        "type": "string",
+        "name": "employee_department_name"
+    },
+    {
+        "control_type": "text",
+        "label": "Employee sub department name",
+        "type": "string",
+        "name": "employee_sub_department_name"
+    },
+    {
+        "control_type": "text",
+        "label": "Is corporate card transaction auto matched",
+        "render_input": {},
+        "parse_output": {},
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "label": "Is corporate card transaction auto matched",
+            "control_type": "text",
+            "toggle_hint": "Use custom value",
+            "type": "boolean",
+            "name": "is_corporate_card_transaction_auto_matched"
+        },
+        "type": "boolean",
+        "name": "is_corporate_card_transaction_auto_matched"
+    },
+    {
+        "control_type": "text",
+        "label": "Corporate card ID",
+        "type": "string",
+        "name": "corporate_card_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Corporate card number",
+        "type": "string",
+        "name": "corporate_card_number"
+    },
+    {
+        "control_type": "text",
+        "label": "Last settled at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "last_settled_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Cluster Domain",
+        "type": "string",
+        "name": "cluster_domain"
+    }
+]

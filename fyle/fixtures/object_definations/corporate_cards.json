@@ -1,0 +1,150 @@
+[
+    {
+        "control_type": "text",
+        "label": "ID",
+        "type": "string",
+        "name": "id"
+    },
+    {
+        "control_type": "text",
+        "label": "Org ID",
+        "type": "string",
+        "name": "org_id"
+    },
+    {
+        "control_type": "text",
+        "label": "User ID",
+        "type": "string",
+        "name": "user_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Created at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "created_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Updated at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "updated_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Bank name",
+        "type": "string",
+        "name": "bank_name"
+    },
+    {
+        "control_type": "text",
+        "label": "Card number",
+        "type": "string",
+        "name": "card_number"
+    },
+    {
+        "control_type": "text",
+        "label": "Cardholder name",
+        "type": "string",
+        "name": "cardholder_name"
+    },
+    {
+        "control_type": "text",
+        "label": "Data feed source",
+        "type": "string",
+        "name": "data_feed_source"
+    },
+    {
+        "control_type": "text",
+        "label": "Code",
+        "type": "string",
+        "name": "code"
+    },
+    {
+        "control_type": "text",
+        "label": "Last synced at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "last_synced_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Last assigned at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "last_assigned_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Assignor user ID",
+        "type": "string",
+        "name": "assignor_user_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Is visa enrolled",
+        "render_input": {},
+        "parse_output": {},
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "label": "Is visa enrolled",
+            "control_type": "text",
+            "toggle_hint": "Use custom value",
+            "type": "boolean",
+            "name": "is_visa_enrolled"
+        },
+        "type": "boolean",
+        "name": "is_visa_enrolled"
+    },
+    {
+        "control_type": "text",
+        "label": "Is dummy",
+        "render_input": {},
+        "parse_output": {},
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "label": "Is dummy",
+            "control_type": "text",
+            "toggle_hint": "Use custom value",
+            "type": "boolean",
+            "name": "is_dummy"
+        },
+        "type": "boolean",
+        "name": "is_dummy"
+    },
+    {
+        "control_type": "text",
+        "label": "Last ready for verification at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "last_ready_for_verification_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Last verification attempt at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "last_verification_attempt_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Last verified at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "last_verified_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Verification status",
+        "type": "string",
+        "name": "verification_status"
+    }
+]

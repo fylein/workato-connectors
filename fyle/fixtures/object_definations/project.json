@@ -1,0 +1,77 @@
+[
+    {
+        "control_type": "number",
+        "label": "ID",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "id"
+    },
+    {
+        "control_type": "text",
+        "label": "Org ID",
+        "type": "string",
+        "name": "org_id"
+    },
+    {
+        "control_type": "text",
+        "label": "Created at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "created_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Updated at",
+        "render_input": "date_time_conversion",
+        "parse_output": "date_time_conversion",
+        "type": "date_time",
+        "name": "updated_at"
+    },
+    {
+        "control_type": "text",
+        "label": "Name",
+        "type": "string",
+        "name": "name"
+    },
+    {
+        "control_type": "text",
+        "label": "Sub project",
+        "type": "string",
+        "name": "sub_project"
+    },
+    {
+        "control_type": "text",
+        "label": "Code",
+        "type": "string",
+        "name": "code"
+    },
+    {
+        "control_type": "text",
+        "label": "Display name",
+        "type": "string",
+        "name": "display_name"
+    },
+    {
+        "control_type": "text",
+        "label": "Description",
+        "type": "string",
+        "name": "description"
+    },
+    {
+        "control_type": "text",
+        "label": "Is enabled",
+        "render_input": {},
+        "parse_output": {},
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "label": "Is enabled",
+            "control_type": "text",
+            "toggle_hint": "Use custom value",
+            "type": "boolean",
+            "name": "is_enabled"
+        },
+        "type": "boolean",
+        "name": "is_enabled"
+    }
+]

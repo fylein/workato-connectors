@@ -38,5 +38,4 @@ jobs:
         cd fyle
         bash setup_test_environment.sh
         bundle install
-        bundle exec rspec spec/actions
-
+        bundle exec rspec

@@ -2508,19 +2508,17 @@
       dept_list = []
       existing_fyle_departments = []
       fyle_departments = get("#{connection["base_uri"]}/platform/v1beta/admin/departments")["data"]
-
       fyle_departments.each { |dept|
         existing_fyle_departments.push(dept["display_name"])
       }
 
       input.each { |department|
-        if not existing_fyle_departments.include?(department[:department_name])
-          if not dept_list.include?(department[:department_name]) and department[:department_name] != ""
-            dept_list.push(department[:department_name])
+        if not existing_fyle_departments.include?(department["department_name"])
+          if not dept_list.include?(department["department_name"]) and department["department_name"] != ""
+            dept_list.push(department["department_name"])
           end
         end
       }
-
       {
         data: dept_list,
       }
