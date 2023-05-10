@@ -1,0 +1,23 @@
+[
+    {
+        "control_type": "number",
+        "label": "Count",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "count"
+    },
+    {
+        "name": "data",
+        "type": "array",
+        "of": "object",
+        "label": "Data",
+        "properties": [
+            {
+                "control_type": "text",
+                "label": "Name",
+                "type": "string",
+                "name": "name"
+            }
+        ]
+    }
+]

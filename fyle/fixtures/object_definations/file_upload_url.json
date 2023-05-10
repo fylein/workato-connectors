@@ -1,0 +1,32 @@
+[
+    {
+        "control_type": "text",
+        "label": "Content type",
+        "type": "string",
+        "name": "content_type"
+    },
+    {
+        "control_type": "text",
+        "label": "Download URL",
+        "type": "string",
+        "name": "download_url"
+    },
+    {
+        "control_type": "text",
+        "label": "ID",
+        "type": "string",
+        "name": "id"
+    },
+    {
+        "control_type": "text",
+        "label": "Name",
+        "type": "string",
+        "name": "name"
+    },
+    {
+        "control_type": "text",
+        "label": "Upload URL",
+        "type": "string",
+        "name": "upload_url"
+    }
+]

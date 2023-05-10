@@ -1,0 +1,279 @@
+[
+    {
+        "name": "data",
+        "type": "array",
+        "of": "object",
+        "label": "Data",
+        "properties": [
+            {
+                "control_type": "number",
+                "label": "Amount",
+                "parse_output": "float_conversion",
+                "type": "number",
+                "name": "amount"
+            },
+            {
+                "name": "approvals",
+                "type": "array",
+                "of": "object",
+                "label": "Approvals",
+                "properties": [
+                    {
+                        "label": "Approver user",
+                        "type": "object",
+                        "name": "approver_user",
+                        "properties": [
+                            {
+                                "control_type": "text",
+                                "label": "Email",
+                                "type": "string",
+                                "name": "email"
+                            },
+                            {
+                                "control_type": "text",
+                                "label": "Full name",
+                                "type": "string",
+                                "name": "full_name"
+                            },
+                            {
+                                "control_type": "text",
+                                "label": "ID",
+                                "type": "string",
+                                "name": "id"
+                            }
+                        ]
+                    },
+                    {
+                        "control_type": "text",
+                        "label": "Approver user ID",
+                        "type": "string",
+                        "name": "approver_user_id"
+                    },
+                    {
+                        "control_type": "text",
+                        "label": "State",
+                        "type": "string",
+                        "name": "state"
+                    }
+                ]
+            },
+            {
+                "control_type": "text",
+                "label": "Created at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "created_at"
+            },
+            {
+                "control_type": "text",
+                "label": "Currency",
+                "type": "string",
+                "name": "currency"
+            },
+            {
+                "control_type": "text",
+                "label": "ID",
+                "type": "string",
+                "name": "id"
+            },
+            {
+                "control_type": "text",
+                "label": "Is exported",
+                "render_input": {},
+                "parse_output": {},
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                    "label": "Is exported",
+                    "control_type": "text",
+                    "toggle_hint": "Use custom value",
+                    "type": "boolean",
+                    "name": "is_exported"
+                },
+                "type": "boolean",
+                "name": "is_exported"
+            },
+            {
+                "control_type": "text",
+                "label": "Is manually flagged",
+                "render_input": {},
+                "parse_output": {},
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                    "label": "Is manually flagged",
+                    "control_type": "text",
+                    "toggle_hint": "Use custom value",
+                    "type": "boolean",
+                    "name": "is_manually_flagged"
+                },
+                "type": "boolean",
+                "name": "is_manually_flagged"
+            },
+            {
+                "control_type": "text",
+                "label": "Is physical bill submitted",
+                "render_input": {},
+                "parse_output": {},
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                    "label": "Is physical bill submitted",
+                    "control_type": "text",
+                    "toggle_hint": "Use custom value",
+                    "type": "boolean",
+                    "name": "is_physical_bill_submitted"
+                },
+                "type": "boolean",
+                "name": "is_physical_bill_submitted"
+            },
+            {
+                "control_type": "text",
+                "label": "Is policy flagged",
+                "render_input": {},
+                "parse_output": {},
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                    "label": "Is policy flagged",
+                    "control_type": "text",
+                    "toggle_hint": "Use custom value",
+                    "type": "boolean",
+                    "name": "is_policy_flagged"
+                },
+                "type": "boolean",
+                "name": "is_policy_flagged"
+            },
+            {
+                "control_type": "text",
+                "label": "Is verified",
+                "render_input": {},
+                "parse_output": {},
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                    "label": "Is verified",
+                    "control_type": "text",
+                    "toggle_hint": "Use custom value",
+                    "type": "boolean",
+                    "name": "is_verified"
+                },
+                "type": "boolean",
+                "name": "is_verified"
+            },
+            {
+                "control_type": "text",
+                "label": "Last approved at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "last_approved_at"
+            },
+            {
+                "control_type": "text",
+                "label": "Last paid at",
+                "type": "string",
+                "name": "last_paid_at"
+            },
+            {
+                "control_type": "text",
+                "label": "Last submitted at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "last_submitted_at"
+            },
+            {
+                "control_type": "number",
+                "label": "Num expenses",
+                "parse_output": "float_conversion",
+                "type": "number",
+                "name": "num_expenses"
+            },
+            {
+                "control_type": "text",
+                "label": "Org ID",
+                "type": "string",
+                "name": "org_id"
+            },
+            {
+                "control_type": "text",
+                "label": "Physical bill submitted at",
+                "type": "string",
+                "name": "physical_bill_submitted_at"
+            },
+            {
+                "control_type": "text",
+                "label": "Purpose",
+                "type": "string",
+                "name": "purpose"
+            },
+            {
+                "control_type": "text",
+                "label": "Seq num",
+                "type": "string",
+                "name": "seq_num"
+            },
+            {
+                "control_type": "text",
+                "label": "Settlement ID",
+                "type": "string",
+                "name": "settlement_id"
+            },
+            {
+                "control_type": "text",
+                "label": "Source",
+                "type": "string",
+                "name": "source"
+            },
+            {
+                "control_type": "text",
+                "label": "State",
+                "type": "string",
+                "name": "state"
+            },
+            {
+                "control_type": "number",
+                "label": "Tax",
+                "parse_output": "float_conversion",
+                "type": "number",
+                "name": "tax"
+            },
+            {
+                "control_type": "text",
+                "label": "Updated at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "updated_at"
+            },
+            {
+                "label": "User",
+                "type": "object",
+                "name": "user",
+                "properties": [
+                    {
+                        "control_type": "text",
+                        "label": "Email",
+                        "type": "string",
+                        "name": "email"
+                    },
+                    {
+                        "control_type": "text",
+                        "label": "Full name",
+                        "type": "string",
+                        "name": "full_name"
+                    },
+                    {
+                        "control_type": "text",
+                        "label": "ID",
+                        "type": "string",
+                        "name": "id"
+                    }
+                ]
+            },
+            {
+                "control_type": "text",
+                "label": "User ID",
+                "type": "string",
+                "name": "user_id"
+            }
+        ]
+    }
+]

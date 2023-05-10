@@ -1,0 +1,202 @@
+[
+    {
+        "control_type": "number",
+        "label": "Count",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "count"
+    },
+    {
+        "name": "data",
+        "type": "array",
+        "of": "object",
+        "label": "Data",
+        "properties": [
+            {
+                "control_type": "text",
+                "label": "Branch account",
+                "type": "string",
+                "name": "branch_account"
+            },
+            {
+                "control_type": "text",
+                "label": "Branch ifsc",
+                "type": "string",
+                "name": "branch_ifsc"
+            },
+            {
+                "control_type": "text",
+                "label": "Business unit",
+                "type": "string",
+                "name": "business_unit"
+            },
+            {
+                "control_type": "text",
+                "label": "Code",
+                "type": "string",
+                "name": "code"
+            },
+            {
+                "control_type": "text",
+                "label": "Created at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "created_at"
+            },
+            {
+                "control_type": "text",
+                "label": "Department",
+                "type": "string",
+                "name": "department"
+            },
+            {
+                "control_type": "text",
+                "label": "Department ID",
+                "type": "string",
+                "name": "department_id"
+            },
+            {
+                "control_type": "text",
+                "label": "Has accepted invite",
+                "render_input": {},
+                "parse_output": {},
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                    "label": "Has accepted invite",
+                    "control_type": "text",
+                    "toggle_hint": "Use custom value",
+                    "type": "boolean",
+                    "name": "has_accepted_invite"
+                },
+                "type": "boolean",
+                "name": "has_accepted_invite"
+            },
+            {
+                "control_type": "text",
+                "label": "ID",
+                "type": "string",
+                "name": "id"
+            },
+            {
+                "control_type": "text",
+                "label": "Is enabled",
+                "render_input": {},
+                "parse_output": {},
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                    "label": "Is enabled",
+                    "control_type": "text",
+                    "toggle_hint": "Use custom value",
+                    "type": "boolean",
+                    "name": "is_enabled"
+                },
+                "type": "boolean",
+                "name": "is_enabled"
+            },
+            {
+                "control_type": "text",
+                "label": "Joined at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "joined_at"
+            },
+            {
+                "control_type": "text",
+                "label": "Level",
+                "type": "string",
+                "name": "level"
+            },
+            {
+                "control_type": "text",
+                "label": "Level ID",
+                "type": "string",
+                "name": "level_id"
+            },
+            {
+                "control_type": "text",
+                "label": "Location",
+                "type": "string",
+                "name": "location"
+            },
+            {
+                "control_type": "text",
+                "label": "Mobile",
+                "type": "string",
+                "name": "mobile"
+            },
+            {
+                "control_type": "text",
+                "label": "Org ID",
+                "type": "string",
+                "name": "org_id"
+            },
+            {
+                "name": "roles",
+                "type": "array",
+                "of": "string",
+                "control_type": "text",
+                "label": "Roles"
+            },
+            {
+                "control_type": "text",
+                "label": "Special email",
+                "type": "string",
+                "name": "special_email"
+            },
+            {
+                "control_type": "text",
+                "label": "Title",
+                "type": "string",
+                "name": "title"
+            },
+            {
+                "control_type": "text",
+                "label": "Updated at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "updated_at"
+            },
+            {
+                "label": "User",
+                "type": "object",
+                "name": "user",
+                "properties": [
+                    {
+                        "control_type": "text",
+                        "label": "Email",
+                        "type": "string",
+                        "name": "email"
+                    },
+                    {
+                        "control_type": "text",
+                        "label": "Full name",
+                        "type": "string",
+                        "name": "full_name"
+                    },
+                    {
+                        "control_type": "text",
+                        "label": "ID",
+                        "type": "string",
+                        "name": "id"
+                    }
+                ]
+            },
+            {
+                "control_type": "text",
+                "label": "User ID",
+                "type": "string",
+                "name": "user_id"
+            }
+        ]
+    },
+    {
+        "control_type": "number",
+        "label": "Offset",
+        "parse_output": "float_conversion",
+        "type": "number",
+        "name": "offset"
+    }
+]

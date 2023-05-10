@@ -1,0 +1,11 @@
+[
+    {
+        "name": "id"
+    },
+    {
+        "name": "email"
+    },
+    {
+        "name": "full_name"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "control_type": "text",
+        "label": "ID",
+        "type": "string",
+        "name": "id"
+    },
+    {
+        "control_type": "text",
+        "label": "Name",
+        "type": "string",
+        "name": "name"
+    },
+    {
+        "control_type": "text",
+        "label": "Content Type",
+        "type": "string",
+        "name": "content_type"
+    }
+]
