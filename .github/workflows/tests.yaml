@@ -39,3 +39,11 @@ jobs:
         bash setup_test_environment.sh
         bundle install
         bundle exec rspec
+
+    - name: Run tests Travelperk SDK
+
+      if: (github.event.action == 'labeled' && github.event.label.name == 'travelperk')
+      run: |
+        cd travelperk-connector
+        bundle install
+        bundle exec rspec
