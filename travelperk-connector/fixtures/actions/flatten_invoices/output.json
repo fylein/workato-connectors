@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "id": "78d8f031-8e23-4be0-b841-1f685b8ae791",
+            "invoice_serial_number": "INV-01-1234",
+            "expense_date": "2020-03-14",
+            "description": "Premium Service for Trip 2494",
+            "vendor": null,
+            "category": "PREMIUM",
+            "booker": "Gary Train",
+            "cost_center": "hr-bcn",
+            "currency": "GBP",
+            "total_amount": "25.00"
+        }
+    ]
+}
