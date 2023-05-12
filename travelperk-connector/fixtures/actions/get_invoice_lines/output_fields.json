@@ -1,0 +1,73 @@
+[
+    {
+        "name": "data",
+        "label": "Data",
+        "type": "array",
+        "of": "object",
+        "properties": [
+            {
+                "control_type": "text",
+                "label": "ID",
+                "type": "string",
+                "name": "id"
+            },
+            {
+                "control_type": "text",
+                "label": "Invoice Serial Number",
+                "type": "string",
+                "name": "invoice_serial_number"
+            },
+            {
+                "control_type": "text",
+                "label": "Expense Date",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "expense_date"
+            },
+            {
+                "control_type": "text",
+                "label": "Description",
+                "type": "string",
+                "name": "description"
+            },
+            {
+                "control_type": "number",
+                "label": "Total Amount",
+                "parse_output": "float_conversion",
+                "type": "number",
+                "name": "total_amount"
+            },
+            {
+                "control_type": "text",
+                "label": "Booker",
+                "type": "string",
+                "name": "booker"
+            },
+            {
+                "control_type": "text",
+                "label": "CostCenter",
+                "type": "string",
+                "name": "cost_center"
+            },
+            {
+                "control_type": "text",
+                "label": "Vendor",
+                "type": "string",
+                "name": "vendor"
+            },
+            {
+                "control_type": "text",
+                "label": "Currency",
+                "type": "string",
+                "name": "currency"
+            },
+            {
+                "control_type": "text",
+                "label": "Category",
+                "type": "string",
+                "name": "category"
+            }
+        ]
+    }
+]

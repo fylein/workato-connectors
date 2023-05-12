@@ -586,9 +586,9 @@
   },
   actions: {
     get_invoice_lines: {
-      execute: lambda do |connection, input|
+      execute: lambda do |connection|
         invoice_lines = get("#{connection["base_uri"]}invoices/lines")["invoice_lines"]
-        flattened_invoice_lines = call(:flatten_invoice_lines, invoice_lines)
+        flattened_invoice_lines = call(:flatten_invoice_lines, { "lines": invoice_lines })
 
         flattened_invoice_lines
       end,
@@ -597,8 +597,8 @@
           {
             name: "data",
             label: "Data",
-            type: :array,
-            of: :object,
+            type: "array",
+            of: "object",
             properties: object_definitions["invoice_lines"],
           },
         ]
@@ -628,15 +628,15 @@
           {
             name: "data",
             label: "Data",
-            type: :array,
-            of: :object,
+            type: "array",
+            of: "object",
             properties: object_definitions["invoices"],
           },
         ]
       end,
     },
     get_webhooks: {
-      execute: lambda do |connection, input|
+      execute: lambda do |connection|
         invoices = get("#{connection["base_uri"]}webhooks")
       end,
     },
@@ -671,8 +671,8 @@
           {
             name: "data",
             label: "Data",
-            type: :array,
-            of: :object,
+            type: "array",
+            of: "object",
             properties: object_definitions["invoice_lines"],
           },
         ]
@@ -728,7 +728,6 @@
   methods: {
     flatten_invoice_lines: lambda do |input|
       flattened_invoice_lines = []
-
       input["lines"].each { |invoice_line|
         flattened_invoice_lines.push({
           id: invoice_line["id"],

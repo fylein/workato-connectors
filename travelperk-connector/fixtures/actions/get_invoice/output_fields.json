@@ -1,0 +1,16 @@
+[
+    {
+        "name": "data",
+        "label": "Data",
+        "type": "array",
+        "of": "object",
+        "properties": [
+            {
+                "control_type": "text",
+                "label": "PDF",
+                "type": "string",
+                "name": "pdf"
+            }
+        ]
+    }
+]

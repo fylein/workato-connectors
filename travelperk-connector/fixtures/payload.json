@@ -1,0 +1,83 @@
+{
+    "billing_information": {
+        "legal_name": "My Company Ltd",
+        "vat_number": "GB123456789",
+        "address_line_1": "199 Bishopsgate",
+        "address_line_2": "Spitalfields",
+        "city": "London",
+        "postal_code": "EC2M 3TY",
+        "country_name": "United Kingdom"
+     },
+    "billing_period": "instant",
+    "currency": "GBP",
+    "due_date": "2020-03-14",
+    "from_date": "2020-03-14",
+      "to_date": "2020-03-24",
+    "issuing_date": "2020-03-14",
+    "lines": [
+      {
+        "id": "78d8f031-8e23-4be0-b841-1f685b8ae791",
+        "expense_date": "2020-03-14",
+        "description": "Premium Service for Trip 2494",
+        "quantity": 1,
+        "unit_price": "25.00",
+        "non_taxable_unit_price": "0.00",
+        "tax_percentage": "0.00",
+        "tax_amount": "0.00",
+        "tax_regime": "G-VAT-R",
+        "total_amount": "25.00",
+        "metadata": {
+          "trip_id": 2494,
+          "trip_name": "Gary Visits Birmingham Christmas Market 🧑‍🎄",
+          "service": "PREMIUM",
+          "travelers": [
+            {
+              "name": "Gary Train",
+              "email": "john.smith@email.com",
+              "external_id": null
+            }
+          ],
+          "booker": {
+            "name": "Gary Train",
+            "email": "gary.train@email.com",
+            "external_id": null
+          },
+          "start_date": null,
+          "end_date": null,
+          "cost_center": "hr-bcn",
+          "labels": [],
+          "vendor": null,
+          "out_of_policy": null,
+          "approvers": [],
+          "service_location": null,
+          "include_breakfast": null,
+          "credit_card_last_4_digits": "5556"
+        }
+      }
+    ],
+    "mode": "reseller",
+    "pdf": "https://api.travelperk.com/invoices/INV-01-1234/pdf",
+    "profile_id": "150d5e95-3bbc-4fab-a8a4-e403f662f6b2",
+    "profile_name": "Profile My Company Ltd",
+    "reference": "Trip #9876543",
+    "serial_number": "INV-01-1234",
+    "status": "paid",
+    "taxes_summary": [
+        {
+           "tax_regime": "STAR",
+           "subtotal": "1001.12",
+           "tax_percentage": "0.00",
+           "tax_amount": "0.00",
+           "total": "1001.12"
+        },
+        {
+           "tax_regime": "G-VAT-R",
+           "subtotal": "10.00",
+           "tax_percentage": "0.00",
+           "tax_amount": "0.00",
+           "total": "10.00"
+        }
+     ],
+    "total": "1011.12",
+    "travelperk_bank_account": null
+  }

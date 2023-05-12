@@ -1,0 +1,9 @@
+[
+    {
+        "control_type": "text",
+        "label": "Invoie Serial Number",
+        "name": "invoice_serial_number",
+        "type": "string",
+        "optional": false
+    }
+]
