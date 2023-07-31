@@ -67,12 +67,6 @@
                 "label": "Category",
                 "type": "string",
                 "name": "category"
-            },
-            {
-                "control_type": "text",
-                "label": "Assignee user email",
-                "type": "string",
-                "name": "assignee_user_email"
             }
         ]
     }
