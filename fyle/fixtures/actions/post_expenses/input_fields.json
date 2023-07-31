@@ -62,13 +62,6 @@
                 "type": "string",
                 "name": "source",
                 "optional": false
-            },
-            {
-                "control_type": "text",
-                "type": "string",
-                "optional": true,
-                "label": "Assignee user email",
-                "name": "assignee_user_email"
             }
         ]
     }
