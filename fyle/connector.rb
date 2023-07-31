@@ -2538,9 +2538,9 @@
   # See more at https://docs.workato.com/developing-connectors/sdk/sdk-reference/methods.html
   methods: {
 
-    get_employee: lambda do |connection, q|
+    get_employee: lambda do |connection, query|
       employee = get("#{connection["base_uri"]}/platform/v1beta/admin/employees").params(
-        "q": q
+        "q": query
       )
       if employee
         employee
