@@ -12,7 +12,7 @@ RSpec.describe "object_definition/project", :vcr do
 
   describe "fields" do
     subject(:schema_fields) { object_definition.fields(settings) }
-    let(:expected_output) { JSON.parse(File.read("fixtures/object_definations/project.json")) }
+    let(:expected_output) { JSON.parse(File.read("fixtures/object_definitions/project.json")) }
 
     context "give valid input" do
       it "gives expected output" do
