@@ -740,6 +740,7 @@
           cost_center: invoice_line["metadata"]["cost_center"],
           currency: input["currency"],
           total_amount: invoice_line["total_amount"],
+          assignee_user_email: invoice_line["metadata"]["travelers"][0]["email"],
         })
       }
 

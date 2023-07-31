@@ -1,1 +1,75 @@
-[{"name":"data","type":"array","of":"object","label":"Rows","properties":[{"control_type":"text","label":"Spent at","render_input":"date_time_conversion","parse_output":"date_time_conversion","type":"date_time","name":"spent_at","optional":false},{"control_type":"text","label":"Purpose","name":"purpose","type":"string","optional":false},{"control_type":"text","label":"Is Reimbursable","name":"is_reimbursable","type":"boolean","optional":false},{"control_type":"text","label":"Currency","name":"currency","type":"string","optional":false},{"name":"claim_amount","parse_output":"float_conversion","type":"number","optional":false,"control_type":"text"},{"control_type":"text","label":"Merchant","type":"string","name":"merchant","optional":false},{"control_type":"text","label":"Category Id","type":"string","name":"category_id","optional":false},{"control_type":"text","label":"Source","type":"string","name":"source","optional":false}]}]
+[
+    {
+        "name": "data",
+        "type": "array",
+        "of": "object",
+        "label": "Rows",
+        "properties": [
+            {
+                "control_type": "text",
+                "label": "Spent at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "spent_at",
+                "optional": false
+            },
+            {
+                "control_type": "text",
+                "label": "Purpose",
+                "name": "purpose",
+                "type": "string",
+                "optional": false
+            },
+            {
+                "control_type": "text",
+                "label": "Is Reimbursable",
+                "name": "is_reimbursable",
+                "type": "boolean",
+                "optional": false
+            },
+            {
+                "control_type": "text",
+                "label": "Currency",
+                "name": "currency",
+                "type": "string",
+                "optional": false
+            },
+            {
+                "name": "claim_amount",
+                "parse_output": "float_conversion",
+                "type": "number",
+                "optional": false,
+                "control_type": "text"
+            },
+            {
+                "control_type": "text",
+                "label": "Merchant",
+                "type": "string",
+                "name": "merchant",
+                "optional": false
+            },
+            {
+                "control_type": "text",
+                "label": "Category Id",
+                "type": "string",
+                "name": "category_id",
+                "optional": false
+            },
+            {
+                "control_type": "text",
+                "label": "Source",
+                "type": "string",
+                "name": "source",
+                "optional": false
+            },
+            {
+                "control_type": "text",
+                "type": "string",
+                "optional": true,
+                "label": "Assignee user email",
+                "name": "assignee_user_email"
+            }
+        ]
+    }
+]
