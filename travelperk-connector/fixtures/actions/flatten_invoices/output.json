@@ -10,7 +10,8 @@
             "booker": "Gary Train",
             "cost_center": "hr-bcn",
             "currency": "GBP",
-            "total_amount": "25.00"
+            "total_amount": "25.00",
+            "assignee_user_email": "john.smith@email.com"
         }
     ]
 }

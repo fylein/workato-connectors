@@ -1819,7 +1819,7 @@
       input_fields: lambda do
         [
           {
-            name: "email",
+            name: "q",
             type: :string,
             optional: false,
           },
@@ -1828,7 +1828,7 @@
 
       execute: lambda do |connection, input_fields|
         query_params = {
-          "user->email": input_fields["email"],
+          "q": input_fields["q"],
         }
 
         employee = get("#{connection["base_uri"]}/platform/v1beta/admin/employees").params(
@@ -2213,6 +2213,55 @@
         ]
       end,
     },
+    assign_expense: {
+      input_fields: lambda do
+        [
+          {
+            "name": "data",
+            "type": "array",
+            "of": "object",
+            "label": "Rows",
+            "properties": [
+              {
+                "control_type": "text",
+                "label": "Id",
+                "name": "id",
+                "type": "string",
+                "optional": false,
+              },
+              {
+                "control_type": "text",
+                "label": "Assignee User Email",
+                "name": "assignee_user_email",
+                "type": "string",
+                "optional": false,
+              },
+            ],
+          },
+        ]
+      end,
+      execute: lambda do |connection, input_fields|
+        admin = call(:get_user_profile, connection)
+        user = call(:get_employee, connection, input_fields["data"][0]["assignee_user_email"])
+        if input_fields["data"][0]["assignee_user_email"] && admin['email'] != input_fields["data"][0]["assignee_user_email"] && user
+          payload = {
+            "data": input_fields["data"][0]
+          }
+          post("#{connection["base_uri"]}/platform/v1/admin/expenses/assign", payload)
+        end
+      end,
+      output_fields: lambda do |object_definitions|
+        [
+          {
+            name: "data",
+            label: "Data",
+            type: "array",
+            of: "object",
+            properties: object_definitions["expense"],
+          },
+        ]
+      end,
+    },
     post_file: {
       input_fields: lambda do
         [
@@ -2488,6 +2537,17 @@
   # Reusable methods can be called from object_definitions, picklists or actions
   # See more at https://docs.workato.com/developing-connectors/sdk/sdk-reference/methods.html
   methods: {
+
+    get_employee: lambda do |connection, query|
+      employee = get("#{connection["base_uri"]}/platform/v1beta/admin/employees").params(
+        "q": query
+      )
+      if employee
+        employee
+      else
+        nil
+      end
+    end,
 
     get_category_id: lambda do |connection, category_name|
       category_id = get("#{connection["base_uri"]}/platform/v1beta/admin/categories").params(

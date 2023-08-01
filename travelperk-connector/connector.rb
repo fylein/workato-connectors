@@ -120,6 +120,12 @@
             "type": "string",
             "name": "category",
           },
+          {
+                "control_type": "text",
+                "label": "Assignee User Email",
+                "type": "string",
+                "name": "assignee_user_email"
+          },
         ]
       end,
     },
@@ -740,6 +746,7 @@
           cost_center: invoice_line["metadata"]["cost_center"],
           currency: input["currency"],
           total_amount: invoice_line["total_amount"],
+          assignee_user_email: invoice_line["metadata"]["travelers"][0]["email"],
         })
       }
 
