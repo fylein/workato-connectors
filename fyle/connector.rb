@@ -2243,7 +2243,7 @@
       execute: lambda do |connection, input_fields|
         admin = call(:get_user_profile, connection)
         user = call(:get_employee, connection, input_fields["data"][0]["assignee_user_email"])
-        if admin['email'] != input_fields["data"][0]["assignee_user_email"] && user
+        if input_fields["data"][0] && admin['email'] != input_fields["data"][0]["assignee_user_email"] && user
           payload = {
             "data": input_fields["data"][0]
           }
