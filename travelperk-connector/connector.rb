@@ -120,6 +120,12 @@
             "type": "string",
             "name": "category",
           },
+          {
+                "control_type": "text",
+                "label": "Assignee User Email",
+                "type": "string",
+                "name": "assignee_user_email"
+          },
         ]
       end,
     },
