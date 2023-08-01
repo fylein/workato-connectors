@@ -42,7 +42,6 @@ RSpec.describe "actions/flatten_travelperk_lines", :vcr do
 
     context "give valid input" do
       it "gives expected output" do
-        put output_fields
         expect(output_fields).to eq(expected_output_fields)
       end
     end
