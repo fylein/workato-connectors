@@ -2243,7 +2243,7 @@
       execute: lambda do |connection, input_fields|
         admin = call(:get_user_profile, connection)
         user = call(:get_employee, connection, input_fields["data"][0]["assignee_user_email"])
-        if input_fields["data"][0]["assignee_user_email"] && admin['email'] != input_fields["data"][0]["assignee_user_email"] && user
+        if input_fields["data"][0]["assignee_user_email"] && admin['email'] != input_fields["data"][0]["assignee_user_email"] && user['data'][0]
           payload = {
             "data": input_fields["data"][0]
           }
@@ -2542,11 +2542,7 @@
       employee = get("#{connection["base_uri"]}/platform/v1beta/admin/employees").params(
         "q": query
       )
-      if employee
-        employee
-      else
-        nil
-      end
+      employee
     end,
 
     get_category_id: lambda do |connection, category_name|
