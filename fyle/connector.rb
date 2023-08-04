@@ -2191,7 +2191,9 @@
 
         if category_map[input_fields["data"][0]["category_id"]]
           system_category_id = call(:get_system_category_id, connection, category_map[input_fields["data"][0]["category_id"]])
-          category_id = call(:get_category_id, connection, category_map[input_fields["data"][0]["category_id"]])
+          category_id = nil
+          if input_fields["data"][0]["category_id"] == "pro_v2"
+            category_id = call(:get_category_id, connection, category_map[input_fields["data"][0]["category_id"]])
           if system_category_id || category_id
             payload[:data]["category_id"] = system_category_id || category_id
           else
