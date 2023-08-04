@@ -2566,7 +2566,7 @@
       category_id = get("#{connection["base_uri"]}/platform/v1beta/admin/categories").params(
         'limit': 1,
         'order': "updated_at.asc",
-        'name': "ilike.%#{category_name}%",
+        'name': "eq.#{category_name}",
         'is_enabled': "eq.True",
       )
 
