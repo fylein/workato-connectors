@@ -121,10 +121,10 @@
             "name": "category",
           },
           {
-                "control_type": "text",
-                "label": "Assignee User Email",
-                "type": "string",
-                "name": "assignee_user_email"
+            "control_type": "text",
+            "label": "Assignee User Email",
+            "type": "string",
+            "name": "assignee_user_email"
           },
         ]
       end,
@@ -739,7 +739,7 @@
           id: invoice_line["id"],
           invoice_serial_number: input["serial_number"],
           expense_date: invoice_line["expense_date"],
-          description: invoice_line["description"],
+          description: invoice_line["description"].gsub(/<\/?[^>]*>/, ""),
           vendor: invoice_line["metadata"]["vendor"] ? invoice_line["metadata"]["vendor"]["name"] : null,
           category: invoice_line["metadata"]["service"] ? invoice_line["metadata"]["service"] : null,
           booker: invoice_line["metadata"]["booker"]["name"],
