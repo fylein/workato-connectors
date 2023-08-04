@@ -2187,14 +2187,16 @@
         payload = {
           "data": input_fields["data"][0],
         }
-        category_map = { "flight" => "Airlines", "car" => "Taxi", "train" => "Train", "hotel" => "Lodging" }
+        category_map = { "flight" => "Airlines", "car" => "Taxi", "train" => "Train", "hotel" => "Lodging", "pro_v2" => "Travelperk Charges" }
 
         if category_map[input_fields["data"][0]["category_id"]]
+          system_category_id = call(:get_system_category_id, connection, category_map[input_fields["data"][0]["category_id"]])
           category_id = call(:get_category_id, connection, category_map[input_fields["data"][0]["category_id"]])
-          if category_id
-            payload[:data]["category_id"] = category_id
+          if system_category_id || category_id
+            payload[:data]["category_id"] = system_category_id || category_id
           else
-            payload[:data].delete("category_id")
+            category = call(:create_category_in_fyle, connection, category_map[input_fields["data"][0]["category_id"]])
+            payload[:data]["category_id"] = category["data"]["id"]
           end
         else
           payload[:data].delete("category_id")
@@ -2545,7 +2547,7 @@
       employee
     end,
 
-    get_category_id: lambda do |connection, category_name|
+    get_system_category_id: lambda do |connection, category_name|
       category_id = get("#{connection["base_uri"]}/platform/v1beta/admin/categories").params(
         'limit': 1,
         'order': "updated_at.asc",
@@ -2558,6 +2560,33 @@
       else
         nil
       end
+    end,
+    
+    get_category_id: lambda do |connection, category_name|
+      category_id = get("#{connection["base_uri"]}/platform/v1beta/admin/categories").params(
+        'limit': 1,
+        'order': "updated_at.asc",
+        'name': "ilike.%#{category_name}%",
+        'is_enabled': "eq.True",
+      )
+
+      if category_id["count"] > 0
+        category_id["data"][0]["id"]
+      else
+        nil
+      end
+    end,
+
+    create_category_in_fyle: lambda do |connection, input_fields|
+        payload = {
+          "data": {
+            'name': input_fields,
+            'is_enabled': true,
+            'restricted_project_ids': [],
+          },
+        }
+        categories = post("#{connection["base_uri"]}/platform/v1beta/admin/categories", payload)
+        categories
     end,
 
     get_department_list: lambda do |input, connection|
