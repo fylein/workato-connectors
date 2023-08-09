@@ -10,7 +10,7 @@ RSpec.describe "methods/get_category_id", :vcr do
   describe "given valid input" do
     subject(:result) { connector.methods.get_category_id(settings, "Airlines") }
     let(:expected_output) { JSON.parse(File.read("fixtures/methods/get_department_list/output.json")) }
-    puts result
+
     it "gives expected output" do
       expect(result).to eq(116918)
     end
