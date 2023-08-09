@@ -2187,7 +2187,7 @@
         payload = {
           "data": input_fields["data"][0],
         }
-        category_map = { "flight" => "Airlines", "car" => "Taxi", "train" => "Train", "hotel" => "Lodging", "pro_v2" => "Travelperk Charges" }
+        category_map = { "flight" => "Airlines", "car" => "Taxi", "train" => "Train", "hotel" => "Lodging", "pro_v2" => "Travelperk Charges", "baggage" => "Airlines" }
 
         if category_map[input_fields["data"][0]["category_id"]]
           category = call(:get_category_id, connection, category_map[input_fields["data"][0]["category_id"]])
