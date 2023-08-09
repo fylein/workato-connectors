@@ -2193,17 +2193,11 @@
           category = call(:get_category_id, connection, category_map[input_fields["data"][0]["category_id"]])
           if category and category["is_enabled"] == true
             payload[:data]["category_id"] = category['id']
-          elsif input_fields["data"][0]["category_id"] == "pro_v2"
-            create_category_payload = {
-              'name': category_map[input_fields["data"][0]["category_id"]]
-            }
-            if category and category["is_enabled"] == false
-              create_category_payload["id"] = category["id"]
-            end
-            new_category = call(:create_or_update_category_in_fyle, connection, create_category_payload)
-            payload[:data]["category_id"] = new_category["data"]["id"]
-          else
+          elsif category and category["is_enabled"] == false
             payload[:data].delete("category_id")
+          elsif input_fields["data"][0]["category_id"] == "pro_v2"
+            new_category = call(:create_or_update_category_in_fyle, connection, category_map[input_fields["data"][0]["category_id"]])
+            payload[:data]["category_id"] = new_category["data"]["id"]
           end
         else
           payload[:data].delete("category_id")
@@ -2583,17 +2577,14 @@
       end
     end,
 
-    create_or_update_category_in_fyle: lambda do |connection, category_payload|
+    create_category_in_fyle: lambda do |connection, category_name|
       payload = {
         "data": {
-          'name': category_payload[:name],
+          'name': category_name,
           'is_enabled': true,
           'restricted_project_ids': [],
         },
       }
-      if category_payload["id"].present?
-        payload[:data]["id"] = category_payload["id"]
-      end
       categories = post("#{connection["base_uri"]}/platform/v1beta/admin/categories", payload)
       categories
     end,
