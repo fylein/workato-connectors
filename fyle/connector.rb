@@ -2196,8 +2196,10 @@
           elsif category and category["is_enabled"] == false
             payload[:data].delete("category_id")
           elsif input_fields["data"][0]["category_id"] == "pro_v2"
-            new_category = call(:create_or_update_category_in_fyle, connection, category_map[input_fields["data"][0]["category_id"]])
+            new_category = call(:create_category_in_fyle, connection, category_map[input_fields["data"][0]["category_id"]])
             payload[:data]["category_id"] = new_category["data"]["id"]
+          else
+            payload[:data].delete("category_id")
           end
         else
           payload[:data].delete("category_id")
@@ -2567,7 +2569,7 @@
       category_id = get("#{connection["base_uri"]}/platform/v1beta/admin/categories").params(
         'limit': 1,
         'order': "updated_at.asc",
-        'name': "eq.#{category_name}"
+        'or': "(name.eq.#{category_name},system_category.eq.#{category_name})",
       )
 
       if category_id["count"] > 0
