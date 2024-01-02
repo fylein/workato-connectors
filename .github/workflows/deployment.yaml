@@ -18,13 +18,13 @@ jobs:
     - run: gem install workato-connector-sdk
     - name: Get changed files Fyle Connector.
       id: changed-files-specific-fyle
-      uses: tj-actions/changed-files@v29
+      uses: tj-actions/changed-files@v41
       with:
         files: |
           fyle/connector.rb
     - name: Get changed files travelperk-connector.
       id: changed-files-specific-travelperk
-      uses: tj-actions/changed-files@v29
+      uses: tj-actions/changed-files@v41
       with:
         files: |
           travelperk-connector/connector.rb
