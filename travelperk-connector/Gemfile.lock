@@ -58,7 +58,7 @@ GEM
       racc (~> 1.4)
     public_suffix (5.0.1)
     racc (1.6.2)
-    rack (2.2.6.4)
+    rack (2.2.8.1)
     rails-html-sanitizer (1.4.4)
       loofah (~> 2.19, >= 2.19.1)
     rest-client (2.1.0)
